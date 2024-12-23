@@ -1,0 +1,161 @@
+/* General section styles */
+.contact-section {
+  padding: 40px;
+  background: linear-gradient(to right, #6eb4ff, #80d0ff); /* Blue wave background */
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90%;
+  max-width: 1200px;
+  gap: 40px;
+  flex-wrap: wrap; /* Enable wrapping for smaller screens */
+}
+
+.contact-text {
+  max-width: 40%;
+  flex: 1; /* Allow resizing for smaller screens */
+}
+
+.contact-text h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.contact-text p {
+  margin: 5px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.contact-text a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-form {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  flex: 1; /* Allow resizing for smaller screens */
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 100px;
+}
+
+.contact-inline {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /* Enable wrapping for smaller screens */
+}
+
+.contact-inline select,
+.contact-inline input {
+  flex: 1;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff; /* Bright blue */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3; /* Darker blue */
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .contact-content {
+    gap: 20px; /* Reduce gap between elements */
+  }
+
+  .contact-text {
+    max-width: 100%; /* Allow full width for smaller screens */
+    text-align: center; /* Center text for better alignment */
+  }
+
+  .contact-form {
+    margin: 0 auto; /* Center the form */
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column; /* Stack text and form vertically */
+    align-items: center; /* Center align items */
+  }
+
+  .contact-text h2 {
+    font-size: 1.8rem; /* Reduce heading size */
+  }
+
+  .contact-text p {
+    font-size: 0.9rem; /* Reduce paragraph font size */
+  }
+
+  .contact-form {
+    width: 90%; /* Take up most of the screen width */
+    max-width: none; /* Remove max width to adapt */
+  }
+
+  .contact-form button {
+    font-size: 1rem; /* Adjust button font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-text h2 {
+    font-size: 1.5rem; /* Further reduce heading size */
+  }
+
+  .contact-text p {
+    font-size: 0.8rem; /* Adjust text size for smaller screens */
+  }
+
+  .contact-form {
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select {
+    font-size: 0.9rem; /* Smaller input font size */
+    padding: 8px; /* Adjust padding for inputs */
+  }
+
+  .contact-form button {
+    padding: 10px; /* Adjust button padding */
+    font-size: 0.9rem; /* Reduce button font size */
+  }
+}

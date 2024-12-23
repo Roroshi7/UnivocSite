@@ -1,0 +1,181 @@
+/* General styles */
+.job-roles {
+  padding: 40px;
+  background-color: #dbe7fe; /* Light blue */
+}
+
+.job-roles-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* Enable wrapping for smaller screens */
+}
+
+/* Section headings */
+.roles-section h2,
+.related-courses-section h2 {
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.roles-section h2::after,
+.related-courses-section h2::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #000000;
+  margin-top: 5px;
+}
+
+/* Job roles */
+.roles-columns {
+  display: flex;
+  flex-direction: column; /* Stack roles vertically */
+}
+
+.left-roles,
+.right-roles {
+  list-style: none;
+  padding: 0;
+}
+
+.job-role-item {
+  font-size: 1.5rem;
+  color: #000; /* Black text */
+  margin: 8px 0;
+  font-weight: bold;
+  list-style-type: disc;
+  margin-left: 20px; /* Indentation for bullets */
+}
+
+/* Related courses */
+.related-courses-section {
+  flex: 1;
+  margin-left: 20px; /* Maintain spacing on larger screens */
+}
+
+.related-course {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #000000; /* Dark blue underline for separation */
+}
+
+.related-course img {
+  width: 30%; /* All images now occupy 30% of the container width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+.course-info {
+  text-align: left;
+  flex-grow: 1; /* Ensures the text stretches across the remaining space */
+}
+
+.course-info p {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 2rem;
+  color: #000;
+}
+
+.course-stars {
+  font-size: 1.8rem; /* Increased star size */
+  color: #ffc107;
+}
+
+/* Separator lines under courses */
+.related-courses-section hr {
+  border: none;
+  border-bottom: 2px solid #000000; /* Dark blue */
+  margin: 10px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .job-roles-container {
+    flex-direction: row; /* Maintain row layout for larger tablets */
+  }
+
+  .roles-columns {
+    flex: 1; /* Allow columns to resize dynamically */
+  }
+
+  .related-courses-section {
+    margin-left: 15px; /* Adjust spacing for smaller screens */
+  }
+
+  .related-course img {
+    width: 35%; /* Slightly larger images for better visibility */
+  }
+
+  .course-info p {
+    font-size: 1.8rem; /* Adjust font size for course names */
+  }
+
+  .course-stars {
+    font-size: 1.5rem; /* Adjust star size */
+  }
+}
+
+@media (max-width: 768px) {
+  .job-roles-container {
+    flex-direction: column; /* Stack sections vertically */
+  }
+
+  .roles-columns {
+    width: 100%; /* Full width for smaller screens */
+    margin-bottom: 20px; /* Add spacing between sections */
+  }
+
+  .related-courses-section {
+    width: 100%; /* Full width for related courses */
+    margin-left: 0; /* Remove left margin */
+  }
+
+  .related-course {
+    flex-direction: row; /* Retain row layout for courses */
+  }
+
+  .related-course img {
+    width: 40%; /* Increase image width for better visibility */
+  }
+
+  .course-info p {
+    font-size: 1.5rem; /* Scale down course name font */
+  }
+}
+
+@media (max-width: 480px) {
+  .roles-section h2,
+  .related-courses-section h2 {
+    font-size: 1.5rem; /* Smaller font size for headings */
+  }
+
+  .job-role-item {
+    font-size: 1.2rem; /* Smaller font for roles */
+  }
+
+  .related-course {
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: flex-start;
+  }
+
+  .related-course img {
+    width: 100%; /* Full width image for smaller screens */
+    margin: 0 0 10px; /* Add margin below the image */
+  }
+
+  .course-info p {
+    font-size: 1.2rem; /* Smaller font size for text */
+  }
+
+  .course-stars {
+    font-size: 1.3rem; /* Scale down stars */
+  }
+}

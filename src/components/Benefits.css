@@ -1,0 +1,142 @@
+.benefits {
+  padding: 40px;
+  background-color: #e8f1fc; /* Light blue background */
+  text-align: center;
+  position: relative;
+}
+
+.benefits h2 {
+  color: #000; /* Change header color to black */
+  font-size: 2rem;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.benefits h2::after {
+  content: ''; /* Create a decorative line */
+  display: block;
+  width: 50%; /* Adjust width to control the line length */
+  height: 3px; /* Line thickness */
+  background-color: #002147; /* Dark blue color for the line */
+  margin: 10px auto 0; /* Center the line and add space above */
+}
+
+.benefits-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  flex-wrap: wrap; /* Enable wrapping for smaller screens */
+}
+
+.benefit-card {
+  background: url('Frame\ 2232-8.png') no-repeat center/cover;
+  border-radius: 15px; /* Ensures the card itself has rounded corners */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 25%;
+  min-height: 150px; /* Added to maintain a consistent card height */
+  text-align: left;
+  color: #fff;
+  transition: filter 0.3s, transform 0.3s;
+  overflow: hidden; /* Prevents overflow from affecting rounded corners */
+}
+
+.benefit-card h3 {
+  color: #fff;
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.benefit-card p {
+  color: #f5f5f5;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Active card (unblurred and slightly larger) */
+.active-card {
+  filter: none;
+  transform: scale(1.05);
+}
+
+/* Other cards are blurred */
+.blurred-card {
+  filter: blur(4px);
+  transform: scale(0.9);
+}
+
+/* Next arrow styling */
+.next-arrow {
+  position: absolute;
+  right: -30px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.next-arrow:hover {
+  transform: scale(1.1);
+}
+
+.benefit-icon {
+  width: 40%;
+  height: 40%;
+  margin-bottom: 10px;
+  border-radius: 15px; /* Rounded corners for the icon inside the card */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .benefit-card {
+      width: 30%; /* Slightly reduce card width on smaller screens */
+  }
+
+  .benefits h2 {
+      font-size: 1.8rem; /* Scale down heading size */
+  }
+
+  .benefits-container {
+      gap: 15px; /* Reduce gap between cards */
+  }
+}
+
+@media (max-width: 768px) {
+  .benefit-card {
+      width: 45%; /* Two cards per row on smaller tablets */
+  }
+
+  .benefits h2 {
+      font-size: 1.5rem; /* Further reduce heading size */
+  }
+
+  .benefits-container {
+      gap: 10px; /* Narrow gap between cards */
+  }
+}
+
+@media (max-width: 480px) {
+  .benefit-card {
+      width: 90%; /* Full width for single column layout */
+      margin: 0 auto 10px; /* Center cards and add spacing */
+  }
+
+  .benefits h2 {
+      font-size: 1.3rem; /* Smaller heading size */
+  }
+
+  .benefits-container {
+      flex-direction: column; /* Stack cards vertically */
+      align-items: center;
+  }
+
+  .benefit-card h3 {
+      font-size: 1rem; /* Reduce card heading size */
+  }
+
+  .benefit-card p {
+      font-size: 0.8rem; /* Smaller font for descriptions */
+  }
+}
